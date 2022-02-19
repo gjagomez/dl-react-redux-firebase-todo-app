@@ -4,7 +4,7 @@
   </p>
   <h1 style="font-size:24px; line-height: 32px; margin-top: 16px; margin-bottom: 16px;">A todo app made with react, redux and firebase.</h1>
 
-Link: [https://todos.danilucaci.com](https://todos.danilucaci.com)
+
 
 </div>
 
@@ -34,8 +34,7 @@ Link: [https://todos.danilucaci.com](https://todos.danilucaci.com)
 
 ## Author
 
-- [Dani Lucaci](https://www.danilucaci.com/)
-- [Contact](https://www.danilucaci.com/contact)
+
 
 ## License
 
