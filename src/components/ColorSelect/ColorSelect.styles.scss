@@ -1,0 +1,144 @@
+@use "../../styles/tokens";
+@use "../../styles/base/placeholders";
+
+.ColorSelect {
+  &__Button {
+    display: flex;
+    align-items: center;
+    background-color: tokens.$color-background-select;
+    border-radius: tokens.$border-radius-button-default;
+    border: tokens.$size-border-select-default
+      tokens.$color-border-select-enabled solid;
+    color: tokens.$color-text-select-enabled;
+
+    font: {
+      size: tokens.$font-size-select;
+      family: tokens.$font-family-body;
+      weight: tokens.$font-weight-body;
+    }
+
+    line-height: tokens.$font-line-height-select;
+
+    width: 100%;
+
+    padding: {
+      top: tokens.$spacing-select-vertical;
+      right: tokens.$spacing-select-horizontal-right;
+      bottom: tokens.$spacing-select-vertical;
+      left: tokens.$spacing-select-horizontal-right;
+    }
+
+    &:hover {
+      border-color: tokens.$color-border-select-hover;
+      box-shadow: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &:focus {
+      border-color: tokens.$color-border-select-focus;
+      box-shadow: tokens.$shadow-select-focus;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .js-focus-visible &:focus:not([data-focus-visible-added]) {
+      border-color: tokens.$color-border-select-focus-polyfill;
+      box-shadow: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &:active {
+      border-color: tokens.$color-border-select-active;
+      box-shadow: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &:disabled {
+      border-color: tokens.$color-border-select-disabled;
+      box-shadow: none;
+      outline: none;
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &__Label {
+    text-align: left;
+    width: 100%;
+    margin-right: tokens.$spacing-c-05;
+    margin-left: tokens.$spacing-c-03;
+  }
+
+  &__Color__Icon {
+    width: tokens.$size-icon-m;
+    height: tokens.$size-icon-m;
+  }
+
+  &__Chevron {
+    fill: tokens.$color-icon-default;
+    width: tokens.$size-icon-m;
+    height: tokens.$size-icon-m;
+  }
+
+  &__List {
+    background-color: tokens.$color-background-dropdown-inner;
+    box-shadow: tokens.$shadow-dropdown;
+    border-radius: tokens.$border-radius-components-default;
+    display: block;
+    width: tokens.$size-dropdown-projects;
+    padding: tokens.$spacing-c-02 0;
+
+    z-index: tokens.$z-index-modal-popup;
+
+    max-height: 40vh;
+    overflow-x: auto;
+
+    ul {
+      margin-left: 0;
+      list-style-type: none;
+    }
+  }
+
+  &__Item {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+
+    display: flex;
+    flex: 1 1 auto;
+
+    padding: {
+      top: tokens.$spacing-c-03;
+      right: tokens.$spacing-c-05;
+      bottom: tokens.$spacing-c-03;
+      left: tokens.$spacing-c-04;
+    }
+
+    &:hover {
+      background-color: tokens.$color-background-dropdown-item-hover;
+      color: tokens.$color-text-body-default;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &--Active {
+      background-color: tokens.$color-background-dropdown-item-hover;
+      font-family: tokens.$font-family-display;
+      font-weight: 700;
+    }
+
+    &__ColorIcon {
+      width: tokens.$size-icon-m;
+      height: tokens.$size-icon-m;
+      margin-right: tokens.$spacing-c-04;
+    }
+  }
+}

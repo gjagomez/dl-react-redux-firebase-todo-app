@@ -1,0 +1,49 @@
+@use "../../styles/tokens";
+@use "../../styles/base/placeholders";
+
+.Todo__Form {
+  @extend %bottom-divider--on-white;
+
+  list-style-type: none;
+
+  padding: {
+    top: tokens.$spacing-c-05;
+    bottom: tokens.$spacing-c-05;
+  }
+}
+
+.Todo__Form__FormWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.Todo__Form__SubmitButton {
+  margin-left: tokens.$spacing-c-05;
+}
+
+.Todo__Form__ButtonsContainer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  margin-top: tokens.$spacing-c-03;
+}
+
+.Todo__Form__MetaRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Todo__Form__ButtonsRow {
+  display: flex;
+  margin-top: tokens.$spacing-c-05;
+  margin-left: auto;
+}
+
+.Todo__Form__Project {
+  margin-right: tokens.$spacing-c-05;
+  margin-top: tokens.$spacing-c-02;
+  margin-bottom: tokens.$spacing-c-02;
+}
+
+.Todo__Form__DueDate {
+}

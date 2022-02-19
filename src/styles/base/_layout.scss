@@ -1,0 +1,178 @@
+@use "../tokens/grid";
+@use "../base/mixins";
+@use "../base/functions";
+@use "../base/placeholders";
+@use "../tokens";
+
+@use "sass:list";
+@use "sass:map";
+
+.row {
+  @extend %clearfix;
+
+  display: block;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+
+  padding-left: grid.$grid-spacing-s;
+  padding-right: grid.$grid-spacing-s;
+
+  @include mixins.media-min(tokens.$grid-gutter-breakpoint-change) {
+    padding-left: grid.$grid-spacing-m;
+    padding-right: grid.$grid-spacing-m;
+  }
+
+  &--contain-12 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: grid.$desktop-max-page-width;
+  }
+
+  &--contain-10 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: grid.$desktop-max-page-width-col10;
+  }
+
+  &--contain-8 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: grid.$desktop-max-page-width-col8;
+  }
+
+  &--contain-6 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: grid.$desktop-max-page-width-col6;
+  }
+
+  &-nested {
+    @extend %clearfix;
+
+    display: block;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-left: -#{grid.$grid-spacing-s};
+    margin-right: -#{grid.$grid-spacing-s};
+
+    @include mixins.media-min(tokens.$grid-gutter-breakpoint-change) {
+      margin-left: -#{grid.$grid-spacing-m};
+      margin-right: -#{grid.$grid-spacing-m};
+    }
+  }
+
+  &--col {
+    flex-direction: column;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+}
+
+.col {
+  margin-left: grid.$grid-spacing-s;
+  margin-right: grid.$grid-spacing-s;
+
+  flex: 1 1 100%;
+  max-width: 100%;
+
+  @include mixins.media-min(tokens.$grid-gutter-breakpoint-change) {
+    float: left;
+    margin-left: grid.$grid-spacing-m;
+    margin-right: grid.$grid-spacing-m;
+  }
+}
+
+// // Generate col-1...12 classes
+@for $loop-index from 1 through grid.$grid-column-count-xl {
+  @include mixins.generate-grid-colums($loop-index, grid.$grid-column-count-xl);
+}
+
+// Generate col-xxxs-1...4 classes with `-xxxs` prefix
+@for $loop-index from 1 through grid.$grid-column-count-s {
+  @include mixins.generate-grid-colums-with-prefix(
+    $loop-index,
+    grid.$grid-column-count-s,
+    xxxs
+  );
+}
+
+// Generate col-xxs-1...4 classes with `-xxs` prefix
+@for $loop-index from 1 through grid.$grid-column-count-s {
+  @include mixins.generate-grid-colums-with-prefix(
+    $loop-index,
+    grid.$grid-column-count-s,
+    xxs
+  );
+}
+
+// Generate col-xs-1...4 classes with `-xs` prefix
+@for $loop-index from 1 through grid.$grid-column-count-s {
+  @include mixins.generate-grid-colums-with-prefix(
+    $loop-index,
+    grid.$grid-column-count-s,
+    xs
+  );
+}
+
+// Generate col-s-1...8 classes with `-s` prefix
+@for $loop-index from 1 through grid.$grid-column-count-m {
+  @include mixins.generate-grid-colums-with-prefix(
+    $loop-index,
+    grid.$grid-column-count-m,
+    s
+  );
+}
+
+// Generate col-m-1...8 classes with `-m` prefix
+@for $loop-index from 1 through grid.$grid-column-count-m {
+  @include mixins.generate-grid-colums-with-prefix(
+    $loop-index,
+    grid.$grid-column-count-m,
+    m
+  );
+}
+
+// Generate col-l-1...8 classes with `-l` prefix
+@for $loop-index from 1 through grid.$grid-column-count-m {
+  @include mixins.generate-grid-colums-with-prefix(
+    $loop-index,
+    grid.$grid-column-count-m,
+    l
+  );
+}
+
+// Generate col-xl-1...12 classes with `-xl` prefix
+@for $loop-index from 1 through grid.$grid-column-count-xl {
+  @include mixins.generate-grid-colums-with-prefix(
+    $loop-index,
+    grid.$grid-column-count-xl,
+    xl
+  );
+}
+
+// Generate col-xxl-1...12 classes with `-xxl` prefix
+@for $loop-index from 1 through grid.$grid-column-count-xl {
+  @include mixins.generate-grid-colums-with-prefix(
+    $loop-index,
+    grid.$grid-column-count-xl,
+    xxl
+  );
+}
+
+// Generate col-xxl-1...12 classes with `-xxxl` prefix
+@for $loop-index from 1 through grid.$grid-column-count-xl {
+  @include mixins.generate-grid-colums-with-prefix(
+    $loop-index,
+    grid.$grid-column-count-xl,
+    xxxl
+  );
+}

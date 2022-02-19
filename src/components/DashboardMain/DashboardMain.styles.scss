@@ -1,0 +1,111 @@
+@use "../../styles/tokens";
+@use "../../styles/base/placeholders";
+
+.DashboardMain {
+  margin-top: tokens.$spacing-main-top-s;
+  padding-bottom: tokens.$spacing-l-06;
+
+  @include tokens.media-min(tokens.$grid-gutter-breakpoint-change) {
+    background-color: tokens.$color-background-page-lightest;
+    margin-top: 0;
+    padding-bottom: tokens.$spacing-l-10;
+    padding-top: tokens.$spacing-main-top-s;
+  }
+
+  @include tokens.media-min(xl) {
+    padding-top: tokens.$spacing-main-top-m;
+  }
+}
+
+.Page__Title {
+  margin-bottom: tokens.$spacing-c-05;
+  font-size: tokens.$font-size-mobile-display-l;
+  line-height: tokens.$font-line-height-mobile-display-l;
+  font-weight: 700;
+
+  text-transform: capitalize;
+
+  &--Label {
+    text-transform: none;
+  }
+
+  @include tokens.media-min(tokens.$grid-gutter-breakpoint-change) {
+    padding: {
+      left: tokens.$spacing-l-04;
+      right: tokens.$spacing-l-04;
+    }
+
+    margin-bottom: tokens.$spacing-c-06;
+    font-size: tokens.$font-size-desktop-display-m;
+    line-height: tokens.$font-line-height-desktop-display-m;
+  }
+}
+
+.Section {
+  margin-bottom: tokens.$spacing-l-05;
+
+  @include tokens.media-min(tokens.$grid-gutter-breakpoint-change) {
+    background-color: tokens.$color-background-page-lightest;
+
+    padding: {
+      left: tokens.$spacing-l-04;
+      right: tokens.$spacing-l-04;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__Todos__List {
+    margin-left: 0;
+  }
+}
+
+.Section__Header {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  padding-bottom: tokens.$spacing-c-05;
+  @extend %bottom-divider--on-white;
+}
+
+.Section__Title {
+  font-size: tokens.$font-size-mobile-display-s;
+  line-height: tokens.$font-line-height-mobile-display-s;
+
+  @include tokens.media-min(tokens.$grid-gutter-breakpoint-change) {
+    font-size: tokens.$font-size-desktop-display-xs;
+    line-height: tokens.$font-line-height-desktop-display-xs;
+  }
+}
+
+.Section__AddNew {
+  margin-top: tokens.$spacing-c-05;
+}
+
+.Section__Date {
+  font-size: tokens.$font-size-body-m;
+  line-height: tokens.$font-line-height-body-m;
+  color: tokens.$color-text-body-subdued;
+
+  margin-left: tokens.$spacing-c-05;
+  margin-right: tokens.$spacing-c-05;
+}
+
+.Section__Link {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  margin-left: auto;
+
+  display: flex;
+
+  &:hover {
+    color: tokens.$color-text-body-default;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

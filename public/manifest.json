@@ -1,0 +1,26 @@
+{
+  "short_name": "Todos",
+  "name": "Todos",
+  "description": "A todo app made with react, redux and firebase. | A personal project by Dani Lucaci.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1654bb",
+  "background_color": "#ffffff"
+}

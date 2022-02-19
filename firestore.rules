@@ -1,0 +1,68 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // deny all by default, aka: locked mode
+     match /{document=**} {
+      allow read, write: if false;
+     }
+    
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    function queryLimit(limit) {
+      return request.query.limit <= limit;
+    }
+
+    function getAdmins() {
+      return get(/databases/$(database)/documents/admin/allowed-users).data.admins;
+    }
+
+    function isAdmin(email) {
+      return email in getAdmins();
+    }
+
+    function getAllowedToSignUpUsers() {
+      return get(/databases/$(database)/documents/admin/allowed-users).data.emails;
+    }
+
+    function isUserAllowedToSignUp(email) {
+      return email in getAllowedToSignUpUsers();
+    }
+
+    function isConsentAccepted() {
+      return request.resource.data.consentAccepted == true;
+    }
+
+    match /admin/allowed-users {
+      allow read, write: if isSignedIn() && isAdmin(request.auth.token.email);
+    }
+    
+    match /colors/{colorId} {
+      allow read: if isSignedIn() && queryLimit(40);
+      allow create: if isSignedIn() && isAdmin(request.auth.token.email);
+    }
+
+    match /users/{userId} {
+      allow create: if isUserAllowedToSignUp(request.auth.token.email) && isConsentAccepted();
+      allow get, update: if isOwner(userId);
+      
+      match /projects/{projectId} {
+        allow read: if queryLimit(20) && isOwner(userId);
+        allow write: if isOwner(userId);
+      }
+      match /labels/{labelId} {
+        allow read: if queryLimit(20) && isOwner(userId);
+        allow write: if isOwner(userId);
+      }
+      match /todos/{todoId} {
+        allow read: if queryLimit(40) && isOwner(userId);
+        allow write: if isOwner(userId);
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@use "../base/functions";
+@use "./grid";
+
+// ******************************************
+// Sizing Tokens
+// ******************************************
+
+// Logo
+$size-logo-vertical-s: functions.rem(40);
+$size-logo-horizontal-s: functions.rem(40) + grid.$grid-spacing-s;
+$size-logo-vertical-xl: functions.rem(56);
+$size-logo-horizontal-xl: functions.rem(144) + grid.$grid-spacing-m;
+
+// Site nav
+$size-site-nav-s: functions.rem(56);
+$size-site-nav-m: functions.rem(64);
+
+// Component border sizes
+$size-border-components-default: functions.rem(1);
+
+// Date Picker Day
+$size-border-datepicker-day: functions.rem(1);
+
+// Buttons
+$size-border-button-default: functions.rem(1);
+$size-border-input-default: functions.rem(1);
+$size-border-select-default: functions.rem(1);
+$size-button-icon-l: functions.rem(48);
+$size-button-icon-m: functions.rem(40);
+$size-button-icon-s: functions.rem(32);
+$size-button-l: functions.rem(48);
+$size-button-m: functions.rem(40);
+$size-button-s: functions.rem(32);
+$size-button-todo: functions.rem(24);
+$size-button-todo-search: functions.rem(20);
+
+// Dividers
+$size-divider-m: functions.rem(2);
+$size-divider-s: functions.rem(1);
+
+// Icons
+$size-icon-m: functions.rem(24);
+$size-icon-s: functions.rem(20);
+
+// Input fields
+$size-input-m: functions.rem(40);
+$size-input-s: functions.rem(32);
+
+// Modal Windows
+$size-modal-xl: functions.rem(520);
+
+// Cookie consent
+$size-cookie-consent-xl: functions.rem(380);
+
+// Account pages
+$size-account-page-xl: functions.rem(600);
+
+// Dropdowns
+$size-dropdown-projects: functions.rem(240);
+$size-dropdown-labels: functions.rem(240);
+$size-dropdown-colors-width: functions.rem(240);
+$size-dropdown-colors-height: functions.rem(388);
+$size-dropdown-datepicker: functions.rem(296);
+$size-dropdown-current-user: functions.rem(240);
+
+// Border Radius
+$border-radius-button-default: 3px;
+$border-radius-components-default: 3px;
+$border-radius-button-text: 1px;
+$border-radius-input-default: 3px;
+$border-radius-checkbox: 3px;
+
+// Avatars
+$border-avatar-default: functions.rem(2);
+$size-avatar-m: functions.rem(40);
+$size-avatar-s: functions.rem(24);
+$size-profile-page-avatar-xl: functions.rem(80);
+$size-profile-page-avatar-m: functions.rem(64);
+
+// Todo Button Icon
+$border-todo-checkbox: functions.rem(1);
+
+// Checkbox
+$border-checkbox: functions.rem(1);

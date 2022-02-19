@@ -1,0 +1,8 @@
+const ProjectsTypes = {
+  SET_PROJECTS: "SET_PROJECTS",
+  ADD_PROJECT: "ADD_PROJECT",
+  UPDATE_PROJECT: "UPDATE_PROJECT",
+  REMOVE_PROJECT: "REMOVE_PROJECT",
+};
+
+export default ProjectsTypes;

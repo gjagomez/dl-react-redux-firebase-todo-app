@@ -1,0 +1,47 @@
+@use "../base/colors";
+
+// ******************************************
+// Box Shadows
+// ******************************************
+
+$shadow-button-outlined-focus: 0px 0px 0px 3px colors.$grey200;
+
+$shadow-input-focus: 0px 0px 0px 3px colors.$grey200;
+$shadow-select-focus: 0px 0px 0px 3px colors.$grey200;
+
+$shadow-button-add-new-focus: 0px 0px 0px 4px colors.$grey50,
+  0px 0px 0px 5px colors.$grey900, 0px 0px 0px 8px colors.$grey200;
+
+$shadow-button-text-focus: 0px 0px 0px 3px colors.$grey200;
+
+$shadow-datepicker-enabled: 0px 1px 0px 0px colors.$grey300;
+$shadow-datepicker-overdue: 0px 1px 0px 0px colors.$danger500;
+
+$shadow-button-primary-hover: 0px 2px 8px rgba(78, 145, 233, 0.3),
+  0px 2px 2px rgba(78, 145, 233, 0.3), 0px 1px 1px rgba(45, 113, 213, 0.4);
+
+$shadow-button-primary-focus: 0px 0px 0px 3px colors.$primary200;
+
+$shadow-section: 0px 2px 12px rgba(153, 153, 153, 0.11),
+  0px 2px 2px rgba(128, 128, 128, 0.11), 0px 1px 1px rgba(128, 128, 128, 0.11);
+
+$shadow-project-card: 0px 2px 12px rgba(153, 153, 153, 0.11),
+  0px 2px 2px rgba(128, 128, 128, 0.11), 0px 1px 1px rgba(128, 128, 128, 0.11);
+
+$shadow-modal-background: 0px 5px 20px rgba(153, 153, 153, 0.15),
+  0px 4px 8px rgba(102, 102, 102, 0.15), 0px 2px 4px rgba(102, 102, 102, 0.15),
+  0px 2px 2px rgba(102, 102, 102, 0.15);
+
+$shadow-dropdown: 0px 0px 20px rgba(153, 153, 153, 0.15),
+  0px 0px 8px rgba(102, 102, 102, 0.15), 0px 0px 4px rgba(102, 102, 102, 0.15),
+  0px 0px 2px rgba(102, 102, 102, 0.15);
+
+$shadow-cookie-consent-mobile: 0px -1.09232px 10.3113px rgba(0, 0, 0, 0.0109397),
+  0px -2.49404px 18.0937px rgba(0, 0, 0, 0.0205689),
+  0px -4.61495px 25.9728px rgba(0, 0, 0, 0.0303445),
+  0px -8.90292px 37.7041px rgba(0, 0, 0, 0.0426841),
+  0px -26px 72px rgba(0, 0, 0, 0.07);
+
+$shadow-cookie-consent-desktop: 0px 0px 20px rgba(153, 153, 153, 0.15),
+  0px 0px 8px rgba(102, 102, 102, 0.15), 0px 0px 4px rgba(102, 102, 102, 0.15),
+  0px 0px 2px rgba(102, 102, 102, 0.15);

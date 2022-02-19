@@ -1,0 +1,195 @@
+@use "../../styles/tokens";
+@use "../../styles/base/placeholders";
+
+.Todo__Item {
+  @extend %bottom-divider--on-white;
+
+  display: flex;
+  list-style-type: none;
+
+  padding: {
+    top: tokens.$spacing-c-05;
+    bottom: tokens.$spacing-c-05;
+  }
+
+  &--Highlighted {
+    @extend %animate-todo-item-scroll-to;
+  }
+}
+
+.Todo__Item__Contents {
+  flex: 1 1 auto;
+}
+
+.Todo__Button {
+  background-color: tokens.$color-background-todo-checkbox-enabled;
+  border: tokens.$color-border-todo-checkbox-enabled
+    tokens.$border-todo-checkbox solid;
+  border-radius: 50%;
+
+  padding: 1px;
+
+  margin-right: tokens.$spacing-c-04;
+  width: tokens.$size-button-todo;
+  height: tokens.$size-button-todo;
+
+  & svg {
+    fill: tokens.$color-icon-todo-checkbox-enabled;
+  }
+
+  &:hover {
+    background-color: tokens.$color-background-todo-checkbox-enabled-hover;
+    border-color: tokens.$color-border-todo-checkbox-enabled-hover;
+    cursor: pointer;
+
+    & > svg {
+      fill: tokens.$color-icon-todo-checkbox-enabled-hover;
+    }
+  }
+
+  &:focus {
+    background-color: tokens.$color-background-todo-checkbox-enabled-focus;
+    border-color: tokens.$color-border-todo-checkbox-enabled-focus;
+    box-shadow: tokens.$shadow-button-outlined-focus;
+    outline: none;
+
+    & > svg {
+      fill: tokens.$color-icon-todo-checkbox-enabled-focus;
+    }
+  }
+
+  &:disabled {
+    background-color: tokens.$color-background-todo-checkbox-enabled-disabled;
+    border-color: tokens.$color-border-todo-checkbox-enabled-disabled;
+    box-shadow: none;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+    }
+
+    & > svg {
+      fill: tokens.$color-icon-todo-checkbox-enabled-disabled;
+    }
+  }
+
+  &--Completed {
+    background-color: tokens.$color-background-todo-checkbox-completed;
+    border-color: tokens.$color-border-todo-checkbox-completed;
+
+    & svg {
+      fill: tokens.$color-icon-todo-checkbox-completed;
+    }
+
+    &:hover {
+      background-color: tokens.$color-background-todo-checkbox-completed-hover;
+      border-color: tokens.$color-border-todo-checkbox-completed-hover;
+      cursor: pointer;
+
+      & > svg {
+        fill: tokens.$color-icon-todo-checkbox-completed-hover;
+      }
+    }
+
+    &:focus {
+      background-color: tokens.$color-background-todo-checkbox-completed-focus;
+      border-color: tokens.$color-border-todo-checkbox-completed-focus;
+      box-shadow: tokens.$shadow-button-primary-focus;
+      outline: none;
+
+      & > svg {
+        fill: tokens.$color-icon-todo-checkbox-completed-focus;
+      }
+    }
+
+    &:disabled {
+      background-color: tokens.$color-background-todo-checkbox-completed-disabled;
+      border-color: tokens.$color-border-todo-checkbox-completed-disabled;
+      box-shadow: none;
+
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        cursor: not-allowed;
+      }
+
+      & > svg {
+        fill: tokens.$color-icon-todo-checkbox-completed-disabled;
+      }
+    }
+  }
+}
+
+.Todo__Button__Icon {
+  width: tokens.$size-icon-s;
+  height: tokens.$size-icon-s;
+  margin: 0;
+}
+
+.Todo__Name {
+  font-size: tokens.$font-size-body-m;
+  line-height: tokens.$font-line-height-body-m;
+  color: tokens.$color-text-body-default;
+  margin-right: tokens.$spacing-c-05;
+  flex: 1 1 auto;
+  text-align: left;
+  background-color: transparent;
+  border: tokens.$size-border-button-default
+    tokens.$color-border-text-button-enabled solid;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    border-radius: tokens.$border-radius-button-default;
+    background-color: tokens.$color-background-todo-meta-focus;
+    border-color: tokens.$color-border-text-button-focus;
+    box-shadow: tokens.$shadow-button-text-focus;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .js-focus-visible &:focus:not([data-focus-visible-added]) {
+    background-color: tokens.$color-background-todo-meta-focus-polyfill;
+    border-color: tokens.$color-border-text-button-focus-polyfill;
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &:active {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: tokens.$color-icon-button-text-disabled;
+
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.Todo__Name__Row {
+  display: flex;
+}
+
+.Todo__Status__Row {
+  margin-top: tokens.$spacing-c-03;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Todo__Item__Project {
+  margin-left: auto;
+
+  @extend %Todo__Form__Meta;
+  padding-right: 0;
+  padding-left: tokens.$spacing-c-02;
+}

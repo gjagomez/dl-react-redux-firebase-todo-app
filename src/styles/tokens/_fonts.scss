@@ -1,0 +1,91 @@
+@use "../base/fonts";
+@use "../base/functions";
+
+// ******************************************
+// Font Tokens
+// ******************************************
+
+// Font Families
+$font-family-display: fonts.$font-family-default;
+$font-family-button: fonts.$font-family-default;
+$font-family-body: fonts.$font-family-default;
+
+// Body
+$font-size-body-m: functions.rem(16);
+$font-size-body-s: functions.rem(14);
+$font-line-height-body-m: functions.rem(24);
+$font-line-height-body-s: functions.rem(20);
+$font-size-calendar-day: functions.rem(10);
+$font-line-height-calendar-day: functions.rem(14);
+
+// 404
+$font-size-404-s: functions.rem(104);
+$font-line-height-404-s: functions.rem(112);
+$font-size-404-m: functions.rem(180);
+$font-line-height-404-m: functions.rem(188);
+
+// Input fields
+$font-size-input-m: functions.rem(16);
+$font-size-input-s: functions.rem(14);
+$font-line-height-input-m: functions.rem(24);
+$font-line-height-input-s: functions.rem(20);
+
+// Date Picker
+$font-size-datepicker-month: functions.rem(16);
+$font-line-height-datepicker-month: functions.rem(24);
+$font-size-datepicker-day: functions.rem(16);
+$font-line-height-datepicker-day: functions.rem(24);
+$font-size-datepicker-weekday: functions.rem(14);
+$font-line-height-datepicker-weekday: functions.rem(20);
+
+// Letter spacing
+$font-letter-spacing-subhead: functions.rem(1);
+
+// Select
+$font-size-select: functions.rem(16);
+$font-line-height-select: functions.rem(24);
+
+// Display Font Size and Line Height
+// Deskop
+$font-size-desktop-display-xl: functions.rem(40);
+$font-size-desktop-display-l: functions.rem(32);
+$font-size-desktop-display-m: functions.rem(28);
+$font-size-desktop-display-s: functions.rem(24);
+$font-size-desktop-display-xs: functions.rem(18);
+
+$font-line-height-desktop-display-xl: functions.rem(48);
+$font-line-height-desktop-display-l: functions.rem(40);
+$font-line-height-desktop-display-m: functions.rem(36);
+$font-line-height-desktop-display-s: functions.rem(32);
+$font-line-height-desktop-display-xs: functions.rem(32);
+
+// Mobile
+$font-size-mobile-display-xl: functions.rem(28);
+$font-size-mobile-display-l: functions.rem(24);
+$font-size-mobile-display-m: functions.rem(20);
+$font-size-mobile-display-s: functions.rem(18);
+$font-size-mobile-display-xs: functions.rem(16);
+
+$font-line-height-mobile-display-xl: functions.rem(36);
+$font-line-height-mobile-display-l: functions.rem(32);
+$font-line-height-mobile-display-m: functions.rem(32);
+$font-line-height-mobile-display-s: functions.rem(32);
+$font-line-height-mobile-display-xs: functions.rem(24);
+
+// Subhead
+$font-size-subhead: functions.rem(14);
+$font-line-height-subhead: functions.rem(20);
+
+// Logo
+$font-size-logo: functions.rem(20);
+$font-line-height-logo: functions.rem(32);
+
+// Buttons
+$font-size-button-m: functions.rem(16);
+$font-size-button-s: functions.rem(14);
+
+$font-line-height-button-m: functions.rem(24);
+$font-line-height-button-s: functions.rem(20);
+
+$font-weight-button: 500;
+$font-weight-body: 400;

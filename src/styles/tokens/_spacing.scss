@@ -1,0 +1,138 @@
+@use "../base/functions";
+@use "sizing";
+
+// ******************************************
+// Spacing Tokens
+// ******************************************
+
+// Size nav
+$spacing-site-nav-vertical-s: functions.rem(8);
+$spacing-site-nav-vertical-m: functions.rem(8);
+
+// 404
+$spacing-404-top-xl: functions.rem(88);
+$spacing-404-bottom-xl: functions.rem(200);
+$spacing-404-top-m: functions.rem(88);
+$spacing-404-bottom-m: functions.rem(200);
+$spacing-404-top-s: functions.rem(40);
+$spacing-404-bottom-s: functions.rem(80);
+
+// Icon Buttons
+$spacing-button-icon-horizontal-l: functions.rem(12) -
+  sizing.$size-border-button-default;
+$spacing-button-icon-vertical-l: functions.rem(12) -
+  sizing.$size-border-button-default;
+$spacing-button-icon-horizontal-m: functions.rem(8) -
+  sizing.$size-border-button-default;
+$spacing-button-icon-vertical-m: functions.rem(8) -
+  sizing.$size-border-button-default;
+$spacing-button-icon-horizontal-s: functions.rem(4) -
+  sizing.$size-border-button-default;
+$spacing-button-icon-vertical-s: functions.rem(4) -
+  sizing.$size-border-button-default;
+
+// Buttons
+$spacing-button-default-horizontal-l: functions.rem(16) -
+  sizing.$size-border-button-default;
+$spacing-button-default-vertical-l: functions.rem(12) -
+  sizing.$size-border-button-default;
+$spacing-button-default-horizontal-m: functions.rem(16) -
+  sizing.$size-border-button-default;
+$spacing-button-default-vertical-m: functions.rem(8) -
+  sizing.$size-border-button-default;
+$spacing-button-default-horizontal-s: functions.rem(12) -
+  sizing.$size-border-button-default;
+$spacing-button-default-vertical-s: functions.rem(4) -
+  sizing.$size-border-button-default;
+
+//Select
+$spacing-select-vertical: functions.rem(12) - sizing.$size-border-input-default;
+$spacing-select-horizontal-left: functions.rem(8) -
+  sizing.$size-border-input-default;
+$spacing-select-horizontal-right: functions.rem(12) -
+  sizing.$size-border-input-default;
+
+$spacing-button-with-icon-left-l: functions.rem(12) -
+  sizing.$size-border-button-default;
+$spacing-button-with-icon-right-l: functions.rem(16) -
+  sizing.$size-border-button-default;
+$spacing-button-with-icon-vertical-l: functions.rem(12) -
+  sizing.$size-border-button-default;
+$spacing-button-with-icon-left-m: functions.rem(12) -
+  sizing.$size-border-button-default;
+$spacing-button-with-icon-right-m: functions.rem(16) -
+  sizing.$size-border-button-default;
+$spacing-button-with-icon-vertical-m: functions.rem(8) -
+  sizing.$size-border-button-default;
+$spacing-button-with-icon-left-s: functions.rem(8) -
+  sizing.$size-border-button-default;
+$spacing-button-with-icon-right-s: functions.rem(12) -
+  sizing.$size-border-button-default;
+$spacing-button-with-icon-vertical-s: functions.rem(4) -
+  sizing.$size-border-button-default;
+
+// Input fields
+$spacing-input-horizontal-m: functions.rem(12) -
+  sizing.$size-border-input-default;
+$spacing-input-vertical-m: functions.rem(12) - sizing.$size-border-input-default;
+
+// Input fields
+$spacing-time-input-horizontal: functions.rem(8) -
+  sizing.$size-border-input-default;
+$spacing-time-input-vertical: functions.rem(4) -
+  sizing.$size-border-input-default;
+
+// Date Picker
+$spacing-datepicker-weekday-horizontal-m: functions.rem(8);
+$spacing-datepicker-weekday-vertical-m: functions.rem(8);
+$spacing-datepicker-day-horizontal-m: functions.rem(8) -
+  sizing.$size-border-datepicker-day;
+$spacing-datepicker-day-vertical-m: functions.rem(8) -
+  sizing.$size-border-datepicker-day;
+
+$spacing-input-horizontal-s: functions.rem(12) -
+  sizing.$size-border-input-default;
+$spacing-input-vertical-s: functions.rem(8) - sizing.$size-border-input-default;
+
+// Search bar
+$spacing-search-bar-horizontal: functions.rem(8) -
+  sizing.$size-border-input-default;
+$spacing-search-bar-vertical: functions.rem(8) -
+  sizing.$size-border-input-default;
+$spacing-mobile-search-bar-list: functions.rem(112);
+
+// Component Spacing Tokens
+$spacing-c-01: functions.rem(2);
+$spacing-c-02: functions.rem(4);
+$spacing-c-03: functions.rem(8);
+$spacing-c-04: functions.rem(12);
+$spacing-c-05: functions.rem(16);
+$spacing-c-06: functions.rem(20);
+$spacing-c-07: functions.rem(24);
+$spacing-c-08: functions.rem(32);
+$spacing-c-09: functions.rem(40);
+$spacing-c-10: functions.rem(48);
+$spacing-c-11: functions.rem(56);
+$spacing-c-12: functions.rem(64);
+
+// Layout Spacing Tokens
+$spacing-l-01: functions.rem(8);
+$spacing-l-02: functions.rem(16);
+$spacing-l-03: functions.rem(24);
+$spacing-l-04: functions.rem(32);
+$spacing-l-05: functions.rem(48);
+$spacing-l-06: functions.rem(64);
+$spacing-l-07: functions.rem(88);
+$spacing-l-08: functions.rem(120);
+$spacing-l-09: functions.rem(160);
+$spacing-l-10: functions.rem(200);
+
+// Main top spacing
+$spacing-main-top-s: functions.rem(24);
+$spacing-main-top-m: functions.rem(40);
+
+// Modals top spacing
+$spacing-modal-top-small-height: functions.rem(16);
+$spacing-modal-top-s: functions.rem(88);
+$spacing-modal-top-m: functions.rem(144);
+$spacing-modal-top-xl: functions.rem(200);

@@ -1,0 +1,202 @@
+@use "styles/reset";
+@use "styles/base/fonts";
+@use "styles/base/layout";
+@use "styles/tokens";
+
+@use "styles/base/placeholders";
+
+.App {
+  // @extend %bg-debug;
+}
+
+[tabindex="-1"] {
+  &:focus {
+    cursor: pointer;
+  }
+
+  .js-focus-visible &:focus:not([data-focus-visible-added]) {
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+mark {
+  background-color: tokens.$color-background-autocomplete-selection;
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul,
+ol {
+  margin-left: 1em;
+  list-style-position: outside;
+}
+
+hr,
+.HR--on-white {
+  width: 100%;
+  display: block;
+  border: none;
+  border-top: tokens.$size-divider-s solid tokens.$color-divider-on-white;
+}
+
+.HR--on-grey {
+  width: 100%;
+  display: block;
+  border: none;
+  border-top: tokens.$size-divider-s solid tokens.$color-divider-on-grey;
+}
+
+a {
+  font-size: tokens.$font-size-body-m;
+  line-height: tokens.$font-line-height-body-m;
+  color: tokens.$color-text-link-default;
+  text-decoration: underline;
+  font-style: normal;
+  font-weight: 400;
+
+  &:visited,
+  &:link {
+    color: tokens.$color-text-link-default;
+  }
+
+  &:hover {
+    background-color: tokens.$color-background-link-hover;
+    color: tokens.$color-text-link-hover;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: tokens.$color-background-link-active;
+    color: tokens.$color-text-link-active;
+    cursor: pointer;
+  }
+}
+
+h1,
+.H1 {
+  color: tokens.$color-text-display-default;
+
+  font-size: tokens.$font-size-mobile-display-xl;
+  line-height: tokens.$font-line-height-mobile-display-xl;
+  font-family: tokens.$font-family-display;
+  font-weight: 700;
+  font-style: normal;
+
+  margin: 0;
+
+  @include tokens.media-min(tokens.$grid-gutter-breakpoint-change) {
+    font-size: tokens.$font-size-desktop-display-xl;
+    line-height: tokens.$font-line-height-desktop-display-xl;
+  }
+}
+
+h2,
+.H2 {
+  color: tokens.$color-text-display-default;
+
+  font-size: tokens.$font-size-mobile-display-l;
+  line-height: tokens.$font-line-height-mobile-display-l;
+  font-family: tokens.$font-family-display;
+  font-weight: 700;
+  font-style: normal;
+
+  margin: 0;
+
+  @include tokens.media-min(tokens.$grid-gutter-breakpoint-change) {
+    font-size: tokens.$font-size-desktop-display-l;
+    line-height: tokens.$font-line-height-desktop-display-l;
+  }
+}
+
+h3,
+.H3 {
+  color: tokens.$color-text-display-default;
+
+  font-size: tokens.$font-size-mobile-display-m;
+  line-height: tokens.$font-line-height-mobile-display-m;
+  font-family: tokens.$font-family-display;
+  font-weight: 700;
+  font-style: normal;
+
+  margin: 0;
+
+  @include tokens.media-min(tokens.$grid-gutter-breakpoint-change) {
+    font-size: tokens.$font-size-desktop-display-m;
+    line-height: tokens.$font-line-height-desktop-display-m;
+  }
+}
+
+h4,
+.H4 {
+  color: tokens.$color-text-display-default;
+
+  font-size: tokens.$font-size-mobile-display-s;
+  line-height: tokens.$font-line-height-mobile-display-s;
+  font-family: tokens.$font-family-display;
+  font-weight: 700;
+  font-style: normal;
+
+  margin: 0;
+
+  @include tokens.media-min(tokens.$grid-gutter-breakpoint-change) {
+    font-size: tokens.$font-size-desktop-display-s;
+    line-height: tokens.$font-line-height-desktop-display-s;
+  }
+}
+
+h5,
+.H5 {
+  color: tokens.$color-text-display-default;
+
+  font-size: tokens.$font-size-mobile-display-xs;
+  line-height: tokens.$font-line-height-mobile-display-xs;
+  font-family: tokens.$font-family-display;
+  font-weight: 700;
+  font-style: normal;
+
+  margin: 0;
+
+  @include tokens.media-min(tokens.$grid-gutter-breakpoint-change) {
+    font-size: tokens.$font-size-desktop-display-xs;
+    line-height: tokens.$font-line-height-desktop-display-xs;
+  }
+}
+
+.Subhead {
+  color: tokens.$color-text-subhead-default;
+
+  font-size: tokens.$font-size-subhead;
+  line-height: tokens.$font-line-height-subhead;
+  font-family: tokens.$font-family-display;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: tokens.$font-letter-spacing-subhead;
+  margin: 0;
+}
+
+[data-reach-menu-list],
+[data-reach-menu-items] {
+  display: block !important;
+  white-space: nowrap !important;
+  border: none !important;
+  background-color: tokens.$color-background-dropdown-item-enabled;
+  outline: none !important;
+  padding: 0 !important;
+  font-size: 100% !important;
+}
+
+[data-reach-menu-item][data-selected] {
+  background-color: tokens.$color-background-dropdown-item-hover !important;
+  color: tokens.$color-text-body-default !important;
+  outline: none;
+}
